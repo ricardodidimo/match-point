@@ -4,10 +4,9 @@
   "description": "A CRUD application using NestJS and Prisma for managing users and court rentals.",
   "main": "dist/main.js",
   "scripts": {
-    "start": "nest start",
+    "start": "node dist/main",
     "build": "nest build",
-    "test": "jest",
-    "lint": "eslint . --ext .ts"
+    "start:prod": "npm run build && npm run start"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
