@@ -87,3 +87,7 @@ Acesse a documentação em:
 - [x] Swagger com exemplos e segurança
 - [x] Configuração com `.env` e `ConfigModule`
 - [x] Prisma ORM e PostgreSQL
+
+
+# COLEÇÃO POSTMAN
+![COLEÇÃO JSON EXPORT](./docs/collection.json)

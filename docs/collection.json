@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "802770d6-37fd-48ad-97eb-7fd6da0d749b",
+		"name": "MatchPoint API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30466811"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ricardodidimo@alunos.utfpr.edu.br\",\n  \"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courts",
+			"item": [
+				{
+					"name": "Create Court",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Quadra 1\",\n  \"location\": \"Guarapuava\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Courts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/courts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Court By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/courts/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Court",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Quadra 1 Updated\",\n  \"location\": \"Guarapuava Updated\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/courts/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Court",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/courts/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"courts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Teste\",\n  \"email\": \"userteste@alunos.utfpr.edu.br\",\n  \"password\": \"123456\",\n  \"roleId\": 2\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"User Updated\",\n  \"email\": \"userupdated@example.com\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rentals",
+			"item": [
+				{
+					"name": "Create Rental",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 2,\n  \"courtId\": 2,\n  \"startTime\": \"2025-06-27T14:00:00.000Z\",\n  \"endTime\": \"2025-06-27T15:00:00.000Z\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/rentals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Rentals",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/rentals",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"rentals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rental By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/rentals/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"rentals",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rental",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startTime\": \"2025-06-28T16:00:00.000Z\",\n    \"endTime\": \"2025-06-28T17:00:00.000Z\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/rentals/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"rentals",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Rental",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/rentals/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"rentals",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwtToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/v1"
+		},
+		{
+			"key": "jwtToken",
+			"value": ""
+		}
+	]
+}
