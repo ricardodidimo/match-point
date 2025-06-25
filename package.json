@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "node dist/main",
-    "build": "nest build",
+    "build": "node node_modules/@nestjs/cli/bin/nest.js",
     "start:prod": "npm run build && npm run start"
   },
   "dependencies": {
