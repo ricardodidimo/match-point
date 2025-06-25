@@ -1,5 +1,8 @@
 # 🏟️ Match Point API
 
+## 🙍🏻‍♂️ Autor
+Ricardo Didimo - TSI 2025/1
+
 ## 📘 Descrição do Projeto
 
 A **Match Point API** é uma aplicação RESTful desenvolvida em **NestJS** com **Prisma ORM** e banco de dados **PostgreSQL**.  
@@ -9,7 +12,7 @@ Ela permite gerenciar usuários, quadras esportivas e agendamentos (alugueis), c
 
 ## 🚀 API em Produção
 
-🔗 [https://match-point-api.onrender.com/api](https://match-point-api.onrender.com/api)
+🔗 [https://match-point-api.onrender.com/api](https://match-point-r8w0.onrender.com/api)
 
 ---
 
